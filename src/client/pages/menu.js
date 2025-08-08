@@ -1,0 +1,38 @@
+export function renderMenu() {
+
+    const app = document.getElementById('app');
+    // alert("Renderizando o menu...");
+    app.innerHTML = `
+                <header>
+    <h1 class="cabecalho">Battle Royal Pixel</h1>
+  </header>
+
+  <main>
+    <section>
+      <p class="conteudo">Welcome to the Battle Royal Pixel game!</p>
+      <p class="conteudo">Click to begin your chaotic journey.</p>
+    </section>
+
+    <nav>
+      <ul class="remove-estilo-table">
+        <li><a class="links"  href="">▶ Play Solo</a></li>
+        <li><a class=" links" href=" local-multiplayer.html">👥 Multiplayer Local</a></li>
+        <li><a class="links" href="online-multiplayer.html">🌐 Multiplayer Online</a></li>
+        <li><a class="links" href="curiosidades.html">❓ Curioso?</a></li>
+      </ul>
+    </nav>
+
+    <div id="loading">Loading... Get ready to click como um maluco!</div>
+  </main>
+
+  <!-- Som opcional (bobeira, mas divertido) -->
+  <audio id="clickSound" src="https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg" preload="auto"></audio>`;
+
+}
+
+document.querySelectorAll("button[data-page]").forEach(btn => {
+    btn.addEventListener("click", () => {
+        console.log("Ir para:", btn.dataset.page);
+        // Aqui você chamaria outro renderizador, ex: renderSolo()
+    });
+});
