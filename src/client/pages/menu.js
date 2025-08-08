@@ -1,9 +1,11 @@
+import {router} from '../router.js';
+
 export function renderMenu() {
 
     const app = document.getElementById('app');
     // alert("Renderizando o menu...");
     app.innerHTML = `
-                <header>
+    <header>
     <h1 class="cabecalho">Battle Royal Pixel</h1>
   </header>
 
@@ -13,14 +15,14 @@ export function renderMenu() {
       <p class="conteudo">Click to begin your chaotic journey.</p>
     </section>
 
-    <nav>
-      <ul class="remove-estilo-table">
-        <li><a class="links"  href="">▶ Play Solo</a></li>
-        <li><a class=" links" href=" local-multiplayer.html">👥 Multiplayer Local</a></li>
-        <li><a class="links" href="online-multiplayer.html">🌐 Multiplayer Online</a></li>
-        <li><a class="links" href="curiosidades.html">❓ Curioso?</a></li>
-      </ul>
-    </nav>
+        <nav>
+        <ul class="remove-estilo-table">
+            <li><a class="links" data-page="singleplayer" href="#">▶ Play Solo</a></li>
+            <li><a class="links" data-page="localmulti" href="#">👥 Multiplayer Local</a></li>
+            <li><a class="links" data-page="onlinemulti" href="#">🌐 Multiplayer Online</a></li>
+            <li><a class="links" data-page="curiosidades" href="#">❓ Curioso?</a></li>
+        </ul>
+        </nav>
 
     <div id="loading">Loading... Get ready to click como um maluco!</div>
   </main>
@@ -30,9 +32,9 @@ export function renderMenu() {
 
 }
 
-document.querySelectorAll("button[data-page]").forEach(btn => {
+document.querySelectorAll("a").forEach(btn => {
+    console.log("Ir para:", btn);
     btn.addEventListener("click", () => {
-        console.log("Ir para:", btn.dataset.page);
-        // Aqui você chamaria outro renderizador, ex: renderSolo()
+  
     });
 });
