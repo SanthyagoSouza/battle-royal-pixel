@@ -1,0 +1,7 @@
+├── server/              # Backend (Node.js)
+│   │   ├── controllers/     # Regras das rotas/salas/jogadores
+│   │   ├── services/        # Lógica do jogo (game loop, colisões, poderes)
+│   │   ├── sockets/         # Gerenciamento de WebSocket
+│   │   ├── rooms/           # Controle de salas
+│   │   ├── models/          # Estrutura dos jogadores, salas, alimentos
+│   │   └── utils/  

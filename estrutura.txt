@@ -1,0 +1,26 @@
+game-project/
+│
+├── public/                  # Arquivos estáticos (imagens, sons, favicon, etc)
+│   └── assets/
+│
+├── src/
+│   ├── client/              # Tudo relacionado ao front-end
+│   │   ├── components/      # Componentes reutilizáveis (ex: botão, player)
+│   │   ├── pages/           # Estrutura de rotas (se tiver SPA)
+│   │   ├── game/            # Engine de jogo no cliente (renderização, input)
+│   │   └── socket/          # Lógica de conexão com o servidor
+│   │
+│   ├── server/              # Backend (Node.js)
+│   │   ├── controllers/     # Regras das rotas/salas/jogadores
+│   │   ├── services/        # Lógica do jogo (game loop, colisões, poderes)
+│   │   ├── sockets/         # Gerenciamento de WebSocket
+│   │   ├── rooms/           # Controle de salas
+│   │   ├── models/          # Estrutura dos jogadores, salas, alimentos
+│   │   └── utils/           # Helpers (ex: gerar GUID, timers, etc)
+│   │
+│   └── shared/              # Código que roda nos dois lados (types, constantes)
+│
+├── .env                     # Variáveis de ambiente
+├── package.json
+├── vite.config.js / next.config.js
+└── README.md

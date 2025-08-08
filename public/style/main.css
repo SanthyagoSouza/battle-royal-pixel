@@ -1,4 +1,4 @@
-    body {
+ .corpo_pagina{
       font-family: monospace;
       background-color: #111;
       color: #eee;
@@ -6,17 +6,17 @@
       padding: 2rem;
     }
 
-    header h1 {
+  .cabecalho {
       font-size: 2.5rem;
       color: #00ffc3;
       margin-bottom: 1rem;
     }
 
-    main p {
+    .conteudo {
       font-size: 1.1rem;
     }
 
-    nav ul {
+    .remove-estilo-table{
       list-style: none;
       padding: 0;
       margin-top: 2rem;
@@ -26,7 +26,7 @@
       margin: 10px 0;
     }
 
-    nav a {
+    .links{
       color: #00ffc3;
       text-decoration: none;
       font-weight: bold;
@@ -35,7 +35,7 @@
       cursor: pointer;
     }
 
-    nav a:hover {
+    .links:hover {
       color: #00bfa6;
     }
 
