@@ -32,12 +32,12 @@ export function renderMenu() {
 
 }
 
-  document.querySelectorAll("a[data-page]").forEach(link => {
-    console.log("Adicionando evento de clique ao link: ", link.dataset.page);
-    link.addEventListener("click", e => {
-        console.log("Evento de clique detectado no link: ", e.target.dataset.page);
-      e.preventDefault(); // evita reload
-      const page = e.target.dataset.page;
-      router(page);
-    });
-  });
+  // do0cument.querySelectorAll("a[data-page]").forEach(link => {
+  //   // console.log("Adicionando evento de clique ao link: ", link.dataset.page);
+  //   link.addEventListener("click", e => {
+  //       // console.log("Evento de clique detectado no link: ", e.target.dataset.page);
+  //     e.preventDefault(); // evita reload
+  //     const page = e.target.dataset.page;
+  //     router(page);
+  //   });
+  // });

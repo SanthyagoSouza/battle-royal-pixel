@@ -1,11 +1,20 @@
-export function renderSinglePlayer() {
-  document.body.innerHTML = `
-    <h1>Single Player</h1>
-    <p>Jogo carregado aqui</p>
-    <button id="voltar">Voltar ao menu</button>
-  `;
+import {router} from '../router.js';
 
-  document.getElementById("voltar").addEventListener("click", () => {
-    import("./menu.js").then(module => module.renderMenu());
-  });
+export function renderSinglePlayer() {
+
+    const app = document.getElementById('app');
+    // alert("Renderizando o menu...");
+    app.innerHTML = `
+    <h1>teste</h1>`;
+
 }
+
+  // do0cument.querySelectorAll("a[data-page]").forEach(link => {
+  //   // console.log("Adicionando evento de clique ao link: ", link.dataset.page);
+  //   link.addEventListener("click", e => {
+  //       // console.log("Evento de clique detectado no link: ", e.target.dataset.page);
+  //     e.preventDefault(); // evita reload
+  //     const page = e.target.dataset.page;
+  //     router(page);
+  //   });
+  // });
